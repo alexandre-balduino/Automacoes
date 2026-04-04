@@ -6,9 +6,11 @@ Repositório com exercícios práticos de automação usando Python.
 
 ### 🟢 Nível 1 — Arquivos e Sistema
 - Organizador de arquivos
-- Detector de arquivos duplicados
-- Renomeador inteligente
-- Lixeira simulada
+- Renomeador de arquivos
+- Simulador de lixeira
+- Limpador de arquivos vazios
+- Lixeira avançada
+- Buscador de arquivos
 
 ### 🟡 Nível 2 — JSON e Dados
 - Cadastro de usuários
