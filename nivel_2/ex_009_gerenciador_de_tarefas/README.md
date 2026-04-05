@@ -32,17 +32,26 @@ Criar um sistema em Python para gerenciar tarefas (to-do list), permitindo adici
 
 ```bash
 cd nivel_2/ex_009_todo_list
+```
+
 Execute o script:
-Bash
+
+```Bash
 python main.py
-📂 Estrutura do projeto
-Bash
+```
+
+## 📂 Estrutura do projeto
+
+```Bash
 ex_009_todo_list/
 ├── main.py
 ├── tarefas.json
 └── README.md
-💡 Exemplo de uso
-Bash
+```
+
+## 💡 Exemplo de uso
+
+```Bash
 [1] Adicionar tarefa
 [2] Listar tarefas
 [3] Concluir tarefa
@@ -54,8 +63,13 @@ Escolha uma opção: 1
 Digite a tarefa: Estudar Python
 
 ✔ Tarefa adicionada com sucesso!
-📄 Exemplo do arquivo JSON
-JSON
+```
+
+---
+
+## 📄 Exemplo do arquivo JSON
+
+```JSON
 [
   {
     "id": 1,
@@ -68,33 +82,50 @@ JSON
     "concluida": true
   }
 ]
-🔧 Como funciona
-O programa verifica se o arquivo tarefas.json existe
-Caso exista:
-carrega as tarefas com json.load()
-Caso não exista:
-inicia uma lista vazia
-Cada tarefa possui:
-id único
-descrição
-status (concluída ou não)
-Ao modificar tarefas:
-os dados são atualizados no JSON
-🚀 Melhorias futuras
-Editar tarefas
-Filtrar por status (pendente/concluída)
-Adicionar prioridade (baixa, média, alta)
-Adicionar data de criação
-Interface interativa mais avançada
-Criar versão com interface gráfica (Kivy)
-📌 Observações
-Os dados são armazenados localmente em JSON
-O ID das tarefas deve ser único
-O arquivo é atualizado a cada alteração
-🎯 Aprendizados
+```
+
+---
+
+## 🔧 Como funciona
+
+* O programa verifica se o arquivo tarefas.json existe
+* Caso exista:
+> * carrega as tarefas com json.load()
+* Caso não exista:
+> * inicia uma lista vazia
+* Cada tarefa possui:
+> * id único
+> * descrição
+> * status (concluída ou não)
+* Ao modificar tarefas:
+> * os dados são atualizados no JSON
+
+---
+
+## 🚀 Melhorias futuras
+
+* Editar tarefas
+* Filtrar por status (pendente/concluída)
+* Adicionar prioridade (baixa, média, alta)
+* Adicionar data de criação
+* Interface interativa mais avançada
+* Criar versão com interface gráfica (Kivy)
+
+---
+
+## 📌 Observações
+
+* Os dados são armazenados localmente em JSON
+* O ID das tarefas deve ser único
+* O arquivo é atualizado a cada alteração
+
+---
+
+## 🎯 Aprendizados
+
 Neste exercício foram praticados:
-CRUD completo com JSON
-Manipulação de listas e dicionários
-Persistência de dados
-Estruturação de sistemas interativos
-Organização de lógica de aplicação
+* CRUD completo com JSON
+* Manipulação de listas e dicionários
+* Persistência de dados
+* Estruturação de sistemas interativos
+* Organização de lógica de aplicação

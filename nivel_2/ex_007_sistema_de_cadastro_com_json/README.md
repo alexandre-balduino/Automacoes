@@ -92,23 +92,19 @@ Email: joao@email.com
 
 ## 🔧 Como funciona
 
-1. O programa verifica se o arquivo dados.json existe
-
-2. Caso exista:
-* carrega os dados com json.load()
-
-3. Caso não exista:
-* cria uma lista vazia
-
-3. Ao cadastrar:
-* adiciona o novo usuário na lista
-* salva com json.dump()
-
-4. Os dados permanecem salvos mesmo após encerrar o programa
+* O programa verifica se o arquivo dados.json existe
+* Caso exista:
+> * carrega os dados com json.load()
+* Caso não exista:
+> * cria uma lista vazia
+* Ao cadastrar:
+> * adiciona o novo usuário na lista
+> * salva com json.dump()
+* Os dados permanecem salvos mesmo após encerrar o programa
 
 ---
 
-🚀 Melhorias futuras
+## 🚀 Melhorias futuras
 
 * Editar e remover usuários
 * Validação de email

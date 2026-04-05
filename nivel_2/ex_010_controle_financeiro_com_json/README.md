@@ -34,17 +34,30 @@ Criar um sistema em Python para registrar e gerenciar transações financeiras (
 
 ```bash
 cd nivel_2/ex_010_controle_financeiro
-Execute o script:
-Bash
+```
+
+2. Execute o script:
+
+```Bash
 python main.py
-📂 Estrutura do projeto
-Bash
+```
+
+---
+
+## 📂 Estrutura do projeto
+
+```Bash
 ex_010_controle_financeiro/
 ├── main.py
 ├── dados.json
 └── README.md
-💡 Exemplo de uso
-Bash
+```
+
+---
+
+## 💡 Exemplo de uso
+
+```Bash
 [1] Registrar receita
 [2] Registrar despesa
 [3] Ver transações
@@ -57,8 +70,13 @@ Descrição: Salário
 Valor: 2500
 
 ✔ Receita registrada com sucesso!
-📄 Exemplo do arquivo JSON
-JSON
+```
+
+---
+
+## 📄 Exemplo do arquivo JSON
+
+```JSON
 [
   {
     "id": 1,
@@ -75,39 +93,59 @@ JSON
     "data": "2026-04-04"
   }
 ]
-🔧 Como funciona
-O programa verifica se o arquivo dados.json existe
-Caso exista:
-carrega as transações com json.load()
-Caso não exista:
-inicia uma lista vazia
-Cada transação possui:
-id único
-descrição
-valor
-tipo (receita ou despesa)
-data
-O saldo é calculado somando:
-receitas (+)
-despesas (-)
-📊 Exemplo de cálculo de saldo
-Bash
+```
+
+---
+
+## 🔧 Como funciona
+
+* O programa verifica se o arquivo dados.json existe
+* Caso exista:
+> * carrega as transações com json.load()
+* Caso não exista:
+> * inicia uma lista vazia
+* Cada transação possui:
+> * id único
+> * descrição
+> * valor
+> * tipo (receita ou despesa)
+> * data
+* O saldo é calculado somando:
+> * receitas (+)
+> * despesas (-)
+
+---
+
+## 📊 Exemplo de cálculo de saldo
+
+```Bash
 Saldo atual: R$ 2350.00
-🚀 Melhorias futuras
-Editar e remover transações
-Categorias (alimentação, transporte, etc.)
-Múltiplas contas (carteira, banco)
-Exportar para CSV ou Excel
-Interface gráfica (Kivy)
-Integração com APIs financeiras
-📌 Observações
-Os dados são armazenados localmente em JSON
-O saldo é calculado dinamicamente
-O arquivo é atualizado a cada nova transação
-🎯 Aprendizados
+
+---
+
+## 🚀 Melhorias futuras
+
+* Editar e remover transações
+* Categorias (alimentação, transporte, etc.)
+* Múltiplas contas (carteira, banco)
+* Exportar para CSV ou Excel
+* Interface gráfica (Kivy)
+* Integração com APIs financeiras
+
+---
+## 📌 Observações
+
+* Os dados são armazenados localmente em JSON
+* O saldo é calculado dinamicamente
+* O arquivo é atualizado a cada nova transação
+
+---
+
+## 🎯 Aprendizados
+
 Neste exercício foram praticados:
-Manipulação de dados financeiros
-Uso de JSON para persistência
-Trabalhar com datas (datetime)
-Estruturação de sistemas reais
-Lógica de cálculo (saldo, receitas e despesas)
+* Manipulação de dados financeiros
+* Uso de JSON para persistência
+* Trabalhar com datas (datetime)
+* Estruturação de sistemas reais
+* Lógica de cálculo (saldo, receitas e despesas)
