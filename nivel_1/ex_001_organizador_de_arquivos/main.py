@@ -4,6 +4,19 @@ import shutil
 
 
 def evitar_duplicados(caminho_destino):
+    """
+    Verifica se um arquivo já existe no destino e, se existir,
+    gera um novo nome adicionando um contador.
+
+    Exemplo:
+        foto.jpg -> foto (1).jpg
+
+    Args:
+        caminho_destino (str): Caminho completo do arquivo de destino.
+
+    Returns:
+        str: Caminho final disponível (sem conflito de nome).
+    """
     if not os.path.exists(caminho_destino):
         return caminho_destino
     else:
@@ -13,7 +26,7 @@ def evitar_duplicados(caminho_destino):
         contador = 1
         
         while True:
-            novo_nome = f"{nome}({contador}){ext}"
+            novo_nome = f"{nome} ({contador}){ext}"
             novo_caminho = os.path.join(pasta, novo_nome)
             
             if not os.path.exists(novo_caminho):
@@ -22,7 +35,43 @@ def evitar_duplicados(caminho_destino):
             contador += 1
 
 
+def registrar_log(mensagem, arquivo_log=os.path.join(os.path.dirname(__file__), "log.txt")):
+    """
+    Registra logs
+    
+    Args:
+        mensagem (str): mensagem a ser registrada no log
+        arquivo_log (str, opcional): nome do arquivo onde o log será salvo
+    
+    Returns:
+        None
+    """
+    with open(arquivo_log, "a") as log:
+        log.write(mensagem + "\n")
+        log.flush()
+        os.fsync(log.fileno())
+
+
 def organizar_pasta(caminho, destino=None):
+    """
+    Organiza arquivos de uma pasta em subpastas baseadas no tipo.
+
+    Categorias:
+        - imagens
+        - audios
+        - documentos
+        - planilhas
+        - videos
+        - outros
+
+    Args:
+        caminho (str): Pasta onde estão os arquivos.
+        destino (str, opcional): Pasta onde os arquivos serão organizados.
+                                 Se None, usa o próprio caminho.
+
+    Returns:
+        None
+    """
     if destino is None:
         destino = caminho
     
@@ -61,11 +110,17 @@ def organizar_pasta(caminho, destino=None):
             os.makedirs(pasta_final, exist_ok=True)
             
             # Move o arquivo
-            print(f"Movendo {nome_arquivo} para {pasta_destino}/")
             destino_final = os.path.join(pasta_final, nome_arquivo)
             destino_final = evitar_duplicados(destino_final)
             
             shutil.move(caminho_arquivo, destino_final)
+            
+            mensagem = f"{nome_arquivo} -> {pasta_destino }"
+            _, nome_final = os.path.split(destino_final)
+            if nome_final != nome_arquivo:
+                mensagem += f"(renomeado para '{nome_final}')"
+            print(mensagem)
+            registrar_log(mensagem)
 
 
 pasta_alvo = os.path.join(os.path.dirname(__file__), "dados")

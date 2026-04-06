@@ -1,0 +1,12 @@
+dados.db -> outros
+dados.json -> outros
+financ.xlsx -> planilhas
+foto.jpg -> imagens
+outro_arquivo.docx -> documentos
+relatorio (1).txt -> documentos(renomeado para 'relatorio (1) (1).txt')
+relatorio.txt -> documentos
+tabela.csv -> planilhas
+trabalho.pdf -> documentos
+um_som.mp3 -> audios
+viagem.png -> imagens
+relatorio.txt -> documentos(renomeado para 'relatorio (2).txt')
