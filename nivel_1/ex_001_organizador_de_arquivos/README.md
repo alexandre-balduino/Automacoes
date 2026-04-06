@@ -85,8 +85,8 @@ pasta/
 ## 🎯 Aprendizados
 
 - Neste projeto foram praticados:
-* Manipulação de arquivos e diretórios com os
-* Movimentação de arquivos com shutil
-* Uso de logs com logging
+* Manipulação de arquivos e diretórios com `os`
+* Movimentação de arquivos com `shutil`
+* Uso de logs com `logging`
 * Estruturação de scripts em Python
 * Automação de tarefas repetitivas
