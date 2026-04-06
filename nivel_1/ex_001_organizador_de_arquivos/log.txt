@@ -1,12 +1,11 @@
-dados.db -> outros
-dados.json -> outros
-financ.xlsx -> planilhas
-foto.jpg -> imagens
-outro_arquivo.docx -> documentos
-relatorio (1).txt -> documentos(renomeado para 'relatorio (1) (1).txt')
-relatorio.txt -> documentos
-tabela.csv -> planilhas
-trabalho.pdf -> documentos
-um_som.mp3 -> audios
-viagem.png -> imagens
-relatorio.txt -> documentos(renomeado para 'relatorio (2).txt')
+2026-04-05 23:08:09,708 - dados.db -> outros
+2026-04-05 23:08:09,710 - dados.json -> outros
+2026-04-05 23:08:09,712 - financ.xlsx -> planilhas
+2026-04-05 23:08:09,714 - foto.jpg -> imagens
+2026-04-05 23:08:09,715 - outro_arquivo.docx -> documentos
+2026-04-05 23:08:09,716 - relatorio.txt -> documentos
+2026-04-05 23:08:09,717 - tabela.csv -> planilhas
+2026-04-05 23:08:09,718 - trabalho.pdf -> documentos
+2026-04-05 23:08:09,719 - um_som.mp3 -> audios
+2026-04-05 23:08:09,721 - viagem.png -> imagens
+2026-04-05 23:08:43,546 - relatorio.txt -> documentos(renomeado para 'relatorio (1).txt')

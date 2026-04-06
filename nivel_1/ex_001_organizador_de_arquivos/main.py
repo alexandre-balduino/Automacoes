@@ -1,7 +1,15 @@
 
 import os
 import shutil
+import logging
 
+
+logging.basicConfig(
+    filename=os.path.join(os.path.dirname(__file__), "log.txt"),
+    level=logging.INFO,
+    format="%(asctime)s - %(message)s",
+    encoding="utf-8"
+)
 
 def evitar_duplicados(caminho_destino):
     """
@@ -33,23 +41,6 @@ def evitar_duplicados(caminho_destino):
                 return novo_caminho
             
             contador += 1
-
-
-def registrar_log(mensagem, arquivo_log=os.path.join(os.path.dirname(__file__), "log.txt")):
-    """
-    Registra logs
-    
-    Args:
-        mensagem (str): mensagem a ser registrada no log
-        arquivo_log (str, opcional): nome do arquivo onde o log será salvo
-    
-    Returns:
-        None
-    """
-    with open(arquivo_log, "a") as log:
-        log.write(mensagem + "\n")
-        log.flush()
-        os.fsync(log.fileno())
 
 
 def organizar_pasta(caminho, destino=None):
@@ -120,7 +111,7 @@ def organizar_pasta(caminho, destino=None):
             if nome_final != nome_arquivo:
                 mensagem += f"(renomeado para '{nome_final}')"
             print(mensagem)
-            registrar_log(mensagem)
+            logging.info(mensagem)
 
 
 pasta_alvo = os.path.join(os.path.dirname(__file__), "dados")
