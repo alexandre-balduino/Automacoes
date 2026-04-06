@@ -1,7 +1,7 @@
 # 📁 Organizador de Arquivos
 
 ```markdown
-⚡ Projeto desenvolvido como exercício prático de automação com Python.
+Projeto desenvolvido como exercício prático de automação com Python.
 Focado em manipulação de arquivos, organização de diretórios e boas práticas.
 ```
 
