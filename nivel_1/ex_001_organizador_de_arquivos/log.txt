@@ -9,3 +9,4 @@
 2026-04-05 23:08:09,719 - um_som.mp3 -> audios
 2026-04-05 23:08:09,721 - viagem.png -> imagens
 2026-04-05 23:08:43,546 - relatorio.txt -> documentos(renomeado para 'relatorio (1).txt')
+2026-04-05 23:23:36,767 - relatorio.txt -> documentos

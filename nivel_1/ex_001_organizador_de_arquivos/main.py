@@ -8,7 +8,8 @@ logging.basicConfig(
     filename=os.path.join(os.path.dirname(__file__), "log.txt"),
     level=logging.INFO,
     format="%(asctime)s - %(message)s",
-    encoding="utf-8"
+    encoding="utf-8",
+    force=True
 )
 
 def evitar_duplicados(caminho_destino):
