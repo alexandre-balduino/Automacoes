@@ -1,5 +1,10 @@
 # 📁 Organizador de Arquivos
 
+```markdown
+> ⚡ Projeto desenvolvido como exercício prático de automação com Python.
+> Focado em manipulação de arquivos, organização de diretórios e boas práticas.
+```
+
 ## 🧠 Objetivo
 Criar um script em Python capaz de organizar automaticamente arquivos de um diretório, separando-os em pastas com base em suas extensões.
 
@@ -10,8 +15,8 @@ Criar um script em Python capaz de organizar automaticamente arquivos de um dire
 - [x] Identificar a extensão de cada arquivo
 - [x] Criar pastas automaticamente (se não existirem)
 - [x] Mover arquivos para suas respectivas pastas
-- [ ] Evitar sobrescrita de arquivos com o mesmo nome
-- [ ] Gerar log das operações realizadas
+- [x] Evitar sobrescrita de arquivos com o mesmo nome
+- [x] Gerar log das operações realizadas
 
 ---
 
@@ -19,21 +24,15 @@ Criar um script em Python capaz de organizar automaticamente arquivos de um dire
 - Python 3
 - Biblioteca `os`
 - Biblioteca `shutil`
+- Biblioteca `logging`
 
 ---
 
 ## ▶️ Como executar
 
-1. Clone o repositório ou copie o código
-2. Navegue até a pasta do exercício:
-
 ```bash
+git clone https://github.com/alexandre-balduino/automacoes.git
 cd ex_001_organizador_arquivos
-```
-
-3. Execute o script:
-
-```Bash
 python main.py
 ```
 
@@ -41,61 +40,53 @@ python main.py
 
 ## 📂 Estrutura esperada
 
-Antes da execução:
+Antes:
 
-```Bash
+```
 pasta/
 ├── foto.jpg
 ├── documento.pdf
 ├── musica.mp3
 ```
 
-Depois da execução:
+Depois:
 
-```Bash
+```
 pasta/
 ├── imagens/
 │   └── foto.jpg
 ├── documentos/
 │   └── documento.pdf
-├── audio/
+├── audios/
 │   └── musica.mp3
 ```
 
 ---
 
-## 💡 Exemplo de saída
+## 📝 Exemplo de log
 
 ```Bash
-Movendo foto.jpg → /imagens
-Movendo documento.pdf → /documentos
-Movendo musica.mp3 → /audio
+2026-04-05 10:00:00 - foto.jpg -> imagens
+2026-04-05 10:00:01 - documento.pdf -> documentos
+2026-04-05 10:00:02 - musica.mp3 -> audios
 ```
-
----
-
-## 🚀 Melhorias futuras
-
-* Tratar arquivos com nomes duplicados
-* Permitir escolher o diretório via input
-* Criar interface no terminal (menu interativo)
-* Gerar relatório em JSON
-* Suporte a mais tipos de arquivos
 
 ---
 
 ## 📌 Observações
 
-* O script considera apenas arquivos (ignora pastas)
-* As pastas de destino são criadas automaticamente
-* Pode ser adaptado para organizar a pasta de Downloads
+- O script considera apenas arquivos (ignora pastas)
+- As pastas de destino são criadas automaticamente
+- O log é salvo automaticamente na pasta do script
+- Pode ser adaptado para organizar a pasta de Downloads
 
 ---
 
 ## 🎯 Aprendizados
 
-Neste exercício foram praticados:
-* Manipulação de arquivos e diretórios com `os`
-* Movimentação de arquivos com `shutil`
+- Neste projeto foram praticados:
+* Manipulação de arquivos e diretórios com os
+* Movimentação de arquivos com shutil
+* Uso de logs com logging
 * Estruturação de scripts em Python
 * Automação de tarefas repetitivas
