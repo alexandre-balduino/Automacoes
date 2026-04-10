@@ -1,0 +1,6 @@
+[
+    {
+        "antigo": "/storage/emulated/0/Download/code/meus_projetos/automacoes/nivel_1/ex_002_renomeador_de_arquivos/dados/umafoto.jpg",
+        "novo": "/storage/emulated/0/Download/code/meus_projetos/automacoes/nivel_1/ex_002_renomeador_de_arquivos/dados/foto_2026-04-10_002.jpg"
+    }
+]

@@ -1,6 +1,7 @@
 
 import os
 import re
+import json
 from datetime import datetime
 
 def nome_valido(nome, prefixo, ext):
@@ -67,7 +68,7 @@ def renomear_arquivos(caminho, *formatos):
         "video": (".mp4",),
         "documento": (".txt", ".doc", ".docx", ".pdf")
     }
-
+    
     # Lista de arquivos ordenados por data
     arquivos = [
         arq for arq in os.listdir(caminho)
@@ -77,6 +78,8 @@ def renomear_arquivos(caminho, *formatos):
 
     contador = 1
     ultimo_dia = None
+    
+    log = []
 
     for arq in arquivos:
         caminho_arquivo = os.path.join(caminho, arq)
@@ -104,15 +107,15 @@ def renomear_arquivos(caminho, *formatos):
         data_obj = datetime.fromtimestamp(timestamp)
         data = data_obj.strftime("%Y-%m-%d")
 
-        # Reseta contador por dia
-        if data != ultimo_dia:
-            contador = 1
-            ultimo_dia = data
-
         # Pula se já estiver no padrão
         if nome_valido(nome_arquivo, prefixo, ext):
             print(f"Pulo (já organizado): {nome_arquivo}")
             continue
+        
+        # Reseta contador por dia
+        if data != ultimo_dia:
+            contador = 1
+            ultimo_dia = data
 
         # Gera novo nome
         novo_nome = f"{prefixo}_{data}_{contador:03d}{ext}"
@@ -132,6 +135,22 @@ def renomear_arquivos(caminho, *formatos):
         else:
             print(f"Renomeando {nome_arquivo} -> {novo_nome}")
             contador += 1
+            log.append({
+                "antigo": caminho_arquivo,
+                "novo": novo_caminho,
+                "data": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            })
+    caminho_log = os.path.join(os.path.dirname(__file__), "log.json")
+    if os.path.exists(caminho_log):
+        with open(caminho_log, "r") as f:
+            log_existente = json.load(f)
+    else:
+        log_existente = []
+
+    log_existente.extend(log)
+
+    with open(caminho_log, "w") as f:
+        json.dump(log_existente, f, indent=4, ensure_ascii=False)
 
 
 def escolher_pasta(caminho_inicial=None):

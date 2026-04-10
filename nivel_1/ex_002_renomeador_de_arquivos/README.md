@@ -7,13 +7,40 @@ Criar um script em Python capaz de renomear arquivos automaticamente com base em
 
 ## ⚙️ Funcionalidades
 - [x] Listar arquivos de um diretório
-- [x] Filtrar arquivos por extensão (ex: `.jpg`)
-- [x] Obter data de criação do arquivo
+- [x] Filtrar arquivos por uma ou múltiplas extensões
+- [x] Obter data de modificação do arquivo
+- [x] Ordenar arquivos por data
 - [x] Gerar novo nome padronizado
 - [x] Renomear arquivos automaticamente
 - [x] Evitar sobrescrita de arquivos
 - [x] Permitir múltiplos tipos de arquivo
+- [x] Resetar numeração por data
 - [x] Escolher diretório via input
+- [x] Gerar log das renomeações em arquivo JSON
+
+---
+
+## 📝 Log de alterações
+
+O script gera automaticamente um arquivo `log.json` contendo o histórico das renomeações realizadas.
+
+Cada entrada do log inclui:
+
+- Caminho original do arquivo
+- Novo caminho após renomeação
+- Data e hora da operação
+
+### Exemplo:
+
+```json
+[
+  {
+    "antigo": "/pasta/IMG_1234.jpg",
+    "novo": "/pasta/foto_2026-04-10_001.jpg",
+    "data": "2026-04-10 15:30:22"
+  }
+]
+```
 
 ---
 
@@ -70,26 +97,19 @@ Renomeando IMG_5551.jpg → foto_2026-04-04_003.jpg
 ```
 
 ## 🔧 Como funciona
-
 * O script percorre os arquivos do diretório
-* Filtra apenas arquivos com extensão desejada
-* Obtém a data de criação de cada arquivo
+* Filtra arquivos com base nas extensões informadas
+* Ordena os arquivos por data de modificação
+* Obtém a data de cada arquivo
 * Formata a data no padrão YYYY-MM-DD
+* Define automaticamente o prefixo com base no tipo do arquivo
+* Reinicia a numeração a cada nova data
 * Gera um novo nome com:
-> * prefixo (foto)
+> * prefixo (foto, audio, video, documento)
 > * data
 > * número sequencial
+* Evita sobrescrever arquivos existentes
 * Renomeia os arquivos
-
----
-
-## 🚀 Melhorias futuras
-
-* Ordenar arquivos por data antes de renomear
-* Adicionar prefixos personalizados
-* Trabalhar com múltiplas extensões
-* Criar interface interativa no terminal
-* Gerar log das alterações em JSON
 
 ---
 
