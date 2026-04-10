@@ -20,30 +20,6 @@ Criar um script em Python capaz de renomear arquivos automaticamente com base em
 
 ---
 
-## 📝 Log de alterações
-
-O script gera automaticamente um arquivo `log.json` contendo o histórico das renomeações realizadas.
-
-Cada entrada do log inclui:
-
-- Caminho original do arquivo
-- Novo caminho após renomeação
-- Data e hora da operação
-
-### Exemplo:
-
-```json
-[
-  {
-    "antigo": "/pasta/IMG_1234.jpg",
-    "novo": "/pasta/foto_2026-04-10_001.jpg",
-    "data": "2026-04-10 15:30:22"
-  }
-]
-```
-
----
-
 ## 🧪 Tecnologias utilizadas
 - Python 3
 - Biblioteca `os`
