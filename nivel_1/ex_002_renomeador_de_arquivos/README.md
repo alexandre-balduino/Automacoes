@@ -11,7 +11,7 @@ Criar um script em Python capaz de renomear arquivos automaticamente com base em
 - [x] Obter data de criação do arquivo
 - [x] Gerar novo nome padronizado
 - [x] Renomear arquivos automaticamente
-- [ ] Evitar sobrescrita de arquivos
+- [x] Evitar sobrescrita de arquivos
 - [ ] Permitir múltiplos tipos de arquivo
 - [ ] Escolher diretório via input
 
@@ -20,6 +20,7 @@ Criar um script em Python capaz de renomear arquivos automaticamente com base em
 ## 🧪 Tecnologias utilizadas
 - Python 3
 - Biblioteca `os`
+- Biblioteca `re`
 - Biblioteca `datetime`
 
 ---
