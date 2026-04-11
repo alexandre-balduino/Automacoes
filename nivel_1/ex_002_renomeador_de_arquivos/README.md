@@ -92,15 +92,13 @@ Renomeando IMG_5551.jpg → foto_2026-04-04_003.jpg
 ## 📌 Observações
 
 * O script considera apenas arquivos (ignora pastas)
-* A numeração é sequencial e baseada na ordem de execução
-* Dependendo do sistema, a "data de criação" pode variar
 
 ---
 
 ## 🎯 Aprendizados
 
 * Neste exercício foram praticados:
-* Manipulação de arquivos com os
-* Uso de timestamps e datas com datetime
+* Manipulação de arquivos com `os`
+* Uso de timestamps e datas com `datetime`
 * Automação de renomeação em lote
 * Padronização de nomes de arquivos
