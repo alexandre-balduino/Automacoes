@@ -10,6 +10,18 @@ def listar_arquivos(arquivo)
 def restaurar_arquivo(arquivo)
 '''
 
+def menu_escolha(arquivo):
+    pass
+
+def mover_lixeira(arquivo):
+    pass
+
+def excluir(arquivo):
+    pass
+
+def restaurar_lixeira(arquivo):
+    pass
+
 def menu(caminho_inicial=None):
     caminho_atual = caminho_inicial or os.getcwd()
     
@@ -54,7 +66,7 @@ def menu(caminho_inicial=None):
             if os.path.isdir(selecionado):
                 caminho_atual = selecionado
             else:
-                print("Isso é um arquivo.")
+                pass
 
         else:
             print("Entrada inválida.")
