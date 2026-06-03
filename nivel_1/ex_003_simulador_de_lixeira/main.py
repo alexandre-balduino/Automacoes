@@ -21,10 +21,26 @@ def main(caminho_inicial=None):
     
     while True:
         print(f"\n📁 Diretório atual: {caminho_atual}")
-        select(
-            "sair",
-            "voltar"
+        
+        opcoes = ["sair", "voltar"]
+        arquivos = os.listdir()
+        arquivos.sort()
+        opcoes.extend(arquivos)
+        
+        opcao = select(
+            *opcoes
         )
+        
+        if opcao == "sair":
+            break
+        elif opcao == "voltar":
+            os.chdir("..")
+        else:
+            if os.path.isdir(opcao):
+                os.chdir(opcao)
+            else:
+                opcoes = ["ignorar", "mover para a lixeira", "excluir permanentemente"]
+                opcao = select(*opcoes)
 
 
 if __name__ == "__main__":
